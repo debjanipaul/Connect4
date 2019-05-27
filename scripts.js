@@ -1,5 +1,6 @@
 var player=1; //1 for Yellow, 2 for Red
 var game_active = false;
+var count = 0;
 var grid = [
   [0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0],
@@ -24,6 +25,7 @@ function drop(col) {
           grid[row][col] = player;
 
           refreshGrid();
+          count++;
 
           if (player==1) {
                 player=2;
@@ -107,6 +109,12 @@ function endGame(winningPlayer) {
 //A function used to refresh the connect4 grid on screen
 function refreshGrid() {
   winGame();
+
+  //Check if the grid is full
+     if(count === 41){
+         document.getElementById('winnerInfo').innerHTML = "GAME OVER! It's a draw!" ;
+     }
+
   for (var row = 0; row < 6; row++) {
     for (var col = 0; col < 7; col++) {
       if (grid[row][col]==0) {
@@ -125,6 +133,7 @@ function resetGrid() {
   for (row=0; row<6; row++) {
 					for (col=0; col<7; col++) {
 						grid[row][col] = 0;
+            count = 0;
             document.getElementById("cell"+row+col).style.backgroundColor="#FFFFFF";
             document.getElementById('winnerInfo').innerHTML = "";
             document.getElementById('grid').classList.remove("avoid-clicks");
