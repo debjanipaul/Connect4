@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Connect 4 Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  </head>
+  <body onload="beginGame();">
+    <H1>CONNECT 4</H1>
+    <div class="spacing">Next Turn: <span id="colorTurn">Player1 - Yellow</span></div>
+    <div>Winner: Player <span id=winnerInfo></span></div>
+    <div id="grid">
+      <div class="row">
+        <div class="cell" id="cell00" onclick="drop(0)"></div>
+        <div class="cell" id="cell01" onclick="drop(1)"></div>
+        <div class="cell" id="cell02" onclick="drop(2)"></div>
+        <div class="cell" id="cell03" onclick="drop(3)"></div>
+        <div class="cell" id="cell04" onclick="drop(4)"></div>
+        <div class="cell" id="cell05" onclick="drop(5)"></div>
+        <div class="cell" id="cell06" onclick="drop(6)"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="cell10" onclick="drop(0)"></div>
+        <div class="cell" id="cell11" onclick="drop(1)"></div>
+        <div class="cell" id="cell12" onclick="drop(2)"></div>
+        <div class="cell" id="cell13" onclick="drop(3)"></div>
+        <div class="cell" id="cell14" onclick="drop(4)"></div>
+        <div class="cell" id="cell15" onclick="drop(5)"></div>
+        <div class="cell" id="cell16" onclick="drop(6)"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="cell20" onclick="drop(0)"></div>
+        <div class="cell" id="cell21" onclick="drop(1)"></div>
+        <div class="cell" id="cell22" onclick="drop(2)"></div>
+        <div class="cell" id="cell23" onclick="drop(3)"></div>
+        <div class="cell" id="cell24" onclick="drop(4)"></div>
+        <div class="cell" id="cell25" onclick="drop(5)"></div>
+        <div class="cell" id="cell26" onclick="drop(6)"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="cell30" onclick="drop(0)"></div>
+        <div class="cell" id="cell31" onclick="drop(1)"></div>
+        <div class="cell" id="cell32" onclick="drop(2)"></div>
+        <div class="cell" id="cell33" onclick="drop(3)"></div>
+        <div class="cell" id="cell34" onclick="drop(4)"></div>
+        <div class="cell" id="cell35" onclick="drop(5)"></div>
+        <div class="cell" id="cell36" onclick="drop(6)"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="cell40" onclick="drop(0)"></div>
+        <div class="cell" id="cell41" onclick="drop(1)"></div>
+        <div class="cell" id="cell42" onclick="drop(2)"></div>
+        <div class="cell" id="cell43" onclick="drop(3)"></div>
+        <div class="cell" id="cell44" onclick="drop(4)"></div>
+        <div class="cell" id="cell45" onclick="drop(5)"></div>
+        <div class="cell" id="cell46" onclick="drop(6)"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="cell50" onclick="drop(0)"></div>
+        <div class="cell" id="cell51" onclick="drop(1)"></div>
+        <div class="cell" id="cell52" onclick="drop(2)"></div>
+        <div class="cell" id="cell53" onclick="drop(3)"></div>
+        <div class="cell" id="cell54" onclick="drop(4)"></div>
+        <div class="cell" id="cell55" onclick="drop(5)"></div>
+        <div class="cell" id="cell56" onclick="drop(6)"></div>
+      </div>
+    </div>
+
+    <input id="resetButton" type="button" value="Reset" onclick="resetGrid()" />
+
+
+    <script src="scripts.js" type="text/javascript"></script>
+  </body>
+</html>
